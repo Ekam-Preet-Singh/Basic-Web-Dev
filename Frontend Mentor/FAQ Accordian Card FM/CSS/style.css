@@ -1,0 +1,124 @@
+:root {
+  --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+  --SoftRed: hsl(14, 88%, 65%);
+  --Softviolet: hsl(273, 75%, 66%);
+  --Softblue: hsl(240, 73%, 65%);
+  --Verydarkgrayishblue: hsl(237, 12%, 33%);
+  --Darkgrayishblue: hsl(240, 6%, 50%);
+  --Lightgrayishblue: hsl(240, 5%, 91%);
+  --Fontsize: 12px;
+}
+
+* {
+  font-family: "Kumbh Sans";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(var(--Softviolet), var(--Softblue));
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapper {
+  background: white;
+  border-radius: 30px;
+  height: 509px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1260% 65%;
+}
+
+.active > .answer {
+  display: block;
+  padding-bottom: 1.3rem;
+  color: var(--darkGrayBlue);
+}
+
+.accordion_wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_accordion {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.accordion_questions {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 1rem; */
+}
+.question_answer_accordion {
+  width: 350px;
+  border-bottom: 1px solid var(--Lightgrayishblue);
+}
+
+.question_title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.4rem 0;
+  color: (var(--Verydarkgrayishblue));
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question img {
+  align-self: center;
+}
+.answer {
+  display: none;
+}
+.image_wrapper {
+  position: relative;
+}
+
+.image_wrapper_inner {
+  background: url(/images/illustration-woman-online-desktop.svg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+}
+
+.box {
+  position: absolute;
+  top: 42%;
+  left: -25%;
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+.attribution {
+  margin: 20px;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  left: 100px;
+  width: 700px;
+  background-color: var(--SoftRed);
+  border-radius: 10px;
+}
+.attribution a {
+  color: white;
+  text-decoration: none;
+}
